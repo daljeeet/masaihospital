@@ -6,7 +6,7 @@ const authUser = require("./middleware/auth")
 require("dotenv").config()
 const app = express()
 app.use(express.json())
-
+app.use(cors())
 app.use("/user",userRoute)
 // middleware
 app.use("/transection",authUser)
